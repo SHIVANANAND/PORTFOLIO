@@ -1,0 +1,94 @@
+<!--Partials and style.css are conflicting with the server as I had to write whole ejs-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link href="https://db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=Proxima+N+W01+Reg" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/6fcade7abbedc0b15b45d46f0b8eca84?family=Coquette+W00+Light" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/e5f78b4fb90a80a32be156470cbfead1?family=Avenir+LT+Pro+35+Light" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title><%- title %></title>
+    <style>
+        header {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+header a {
+    font-family: "Avenir LT Pro 35 Light";
+    color: black;
+    text-decoration: none;
+}
+.current-link {
+    color: rgb(0, 80, 255);
+}
+header a:hover {
+    color: rgb(0, 80, 255);
+    text-decoration: none; 
+}
+
+footer {
+    font-family: "Avenir LT Pro 35 Light";
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 150px;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding-right: 0px;
+        justify-content: center;
+    }
+
+    footer {
+        position: relative;
+        top: 300px;
+    }
+}
+
+h1 {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    text-align: center;
+    padding: 40px;
+}
+
+
+.post-container {
+    max-width: 982px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-family: poppins-semibold, poppins, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">ABOUT ME</a>
+        <a href="/resume">RESUME</a>
+        <a href="/projects">PROJECTS</a>
+        <a href="/blog">BLOG</a>
+    </header>
+    <div class="post-container">
+        <h1><%= data.title %></h1>
+        <article class="article">
+            <%- data.body %>
+        </article> 
+    </div>
+    <footer>
+        <p>© Shivan Anand <% const date = new Date(); const currentYear = date.getFullYear(); %><%= currentYear %></p>
+    </footer>
+</body>
+</html>

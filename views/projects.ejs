@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+<div class="blog-container">
+    <div class="author">
+        <h1 class="author-heading">Projects</h1>
+    </div>
+
+    <section class="articles">
+        <h2 class="articles-heading">crafted with passion.</h2>
+        <ul class="article-ul">
+
+            <% for(var i = data.length - 1; i >= 0 ; i--) { %>
+            <li>
+                <a href="<%= data[i].URL %>" target="_blank">
+                    <span><b><%= data[i].title %></b></span>
+                    <span class="article-list-date"><%= data[i].createdAt.toDateString() %></span>
+                </a>
+                <a href="<%= data[i].URL %>" target="_blank">
+                    <span class="project-body"><%= data[i].body %></span>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </section>
+</div>
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+<div class="blog-container">
+    <div class="author">
+        <h1 class="author-heading">Hi, I am Shivan Anand.</h1>
+        <p class="author-body">Web developer.</p>
+    </div>
+
+    <img src="./assets/images/hero-image.webp" alt="person looking out through window" class="hero-image responsive-image">
+
+    <section class="articles">
+        <h2 class="articles-heading">Latest Posts</h2>
+        <ul class="article-ul">
+
+            <% for(var i = data.length - 1; i >= 0 ; i--) { %>
+            <li>
+                <a href="/post/<%= data[i]._id %>">
+                    <span><%= data[i].title %></span>
+                    <span class="article-list-date"><%= data[i].createdAt.toDateString() %></span>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </section>
+</div>
+
+<%- include('partials/footer.ejs') %>
