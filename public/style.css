@@ -1,3 +1,32 @@
+@font-face {
+    font-family: 'Proxima N W01 Reg';
+    src: url('./assets/fonts/Proxima N W01 Reg.ttf');
+}
+@font-face {
+    font-family: 'Coquette W00 Light';
+    src: url('./assets/fonts/Coquette W00 Light.ttf');
+}
+@font-face {
+    font-family: 'Avenir LT Pro 35 Light';
+    src: url('./assets/fonts/Avenir LT Pro 35 Light.ttf');
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./assets/fonts/Quicksand.ttf');
+}
+@font-face {
+    font-family: 'Barlow';
+    src: url('./assets/fonts/Barlow-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('./assets/fonts/Poppins-SemiBold.ttf');
+}
+
+
+
+
+
 header {
     display: flex;
     gap: 2rem;
