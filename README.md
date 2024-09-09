@@ -2,7 +2,7 @@
 
 This is a personal portfolio website built using **Node.js**, **Express**, **MongoDB**, and **EJS** as the view engine. The website showcases projects, blog posts, and information about my work as a web developer. It also features a responsive design and a minimalistic style.
 
-The site is deployed on [Render](https://shivanportfolio.onrender.com/).
+The site is deployed on [Railway](shivan.up.railway.app).
 
 ## Features
 
